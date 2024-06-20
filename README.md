@@ -57,3 +57,10 @@ The system utilizes Bluetooth Low Energy (BLE) for efficient wireless communicat
 
 Sophisticated algorithms analyze gyroscope and accelerometer data to detect walking movements accurately. When specific conditions are met, such as significant foot movement indicating walking, the foot controller enters a temporary sleep mode to avoid sending unintended commands to the arm.
 
+## Contact
+
+For any questions or issues, please contact sarakhaled.kaz@gmail.com.
+
+---
+Feel free to reach out with any questions or feedback regarding this Foot Controller in C/C++. Happy coding!
+
