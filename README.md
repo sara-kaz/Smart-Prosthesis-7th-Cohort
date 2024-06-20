@@ -33,6 +33,27 @@ The tasks involved in achieving these goals are:
 - Transitioning to parallel servo actuation and efficient payload processing
 - Infinity Foot Controller
 
+## Repository Structure
+
+### /Arm_Code/
+
+- **ArmCode_4_9_ESPBLEBTNCombined.ino**: Main code for the arm controller integrating ESP and BLE button functionality.
+- **SP23_24Logo.png**: Project logo image.
+- **SP_Logo.h**: Header file for the project logo.
+- **armServer.h**: Header file for the arm server.
+- **processToeButtons.h**: Header file for processing toe button inputs.
+- **wristRotations.h**: Header file for controlling wrist rotations.
+
+### /Foot-Controller/
+
+- **BatteryCharger.h**: Header file for the battery charger module.
+- **FootControl_4_9_Button.ino**: Main code for the foot control with button integration.
+- **SeeedAcceloTrigger.h**: Header file for the accelerometer trigger.
+
+### /Foot-Sleeve/
+
+- **FootSleeve_4_9_ESPNOW.ino**: Main code for the foot sleeve using ESP-NOW protocol.
+
 ## Components Overview
 
 ### Foot Controller Unit (FCU)
