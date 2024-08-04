@@ -24,9 +24,7 @@
 * Reset Function to restart arm through serial
 */
 void (*resetFunc)(void) = 0;
-
 float gyroState[3];  // x, y, z
-
 bool systemActive = false;
 
 // Define the structure to store the received data
@@ -62,20 +60,20 @@ void OnDataRecv(const uint8_t *mac, const uint8_t *data, int len) {
 }
 
 void setup() {
-  /** 
+/** 
 * Setting up ESP Port
 */
   Serial.begin(115200);
   Serial.println("Setup begun");
 
-  /**
+/**
 * Setting up the server
 * Always setup the server before ESPNOW
 */
   pinMode(LED_BUILTIN, OUTPUT);
   esp32ServerStart();
 
-  /**
+/**
 * ESP NOW
 */
 
@@ -91,7 +89,7 @@ void setup() {
   // Register the callback function for received data
   esp_now_register_recv_cb(esp_now_recv_cb_t(OnDataRecv));
 
-  /**
+/**
 * BLE
 */
 
@@ -105,7 +103,7 @@ void setup() {
 
   BLE.scan();
 
-  /**
+/**
 *Servos
 */
   // Finger Servos
@@ -321,7 +319,7 @@ void esp32ServerStart(void) {
 
 /**
   WebSerial Commands
-   How it works: Assign a text that you are going to input into the WebSerial  page. Then assign the specific command that is going to be ran when the text is processed
+  How it works: Assign a text that you are going to input into the WebSerial  page. Then assign the specific command that is going to be ran when the text is processed
 */
 
 void webSerialMessage(uint8_t *data, size_t len) {
